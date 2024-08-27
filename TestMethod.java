@@ -30,7 +30,7 @@ public class TestMethod {
         		"DOB",
         		"Gender"
         };
-        int testvariable;
+        
          
          for (Map.Entry<String, ArrayList<String>> entry : fileData.entrySet()) {
              String key = entry.getKey();
