@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -14,36 +16,55 @@ import SelfAutomation.PersonRecord;
 
 public class FileReader {
 
-	public static Map<String, ArrayList<String>> extractvalues( int StartRow, int EndRow) throws IOException {
+	public static Map<String, ArrayList<String>> extractvalues() throws IOException {
 		Properties properties = ConfigReader.loadproperties();
-   	 String filepath = properties.getProperty("file.path");
+		String filepath = properties.getProperty("file.path");
+		int StartRow = Integer.parseInt(properties.getProperty("start.position"));
+		int EndRow = Integer.parseInt(properties.getProperty("end.position"));
+		
 		Map<String, ArrayList<String>> fileValue = new HashMap();
 		FileInputStream fstream = new FileInputStream(filepath);
 		BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
 
 		int rowcount = 0;
 		String linecount;
-		
-		//calling FieldDetails Method to get the excel sheet value
-		ArrayList<Integer> position = FieldDetails.filedPosition("Field_Positions"); 
-		
+
+		// calling FieldDetails Method to get the excel sheet value
+		ArrayList<Integer> position = FieldDetails.filedPosition("Field_Positions");
+
+		ArrayList<Integer> fieldToValidate = FieldToTest.fieldToTestList();
+
 		while ((linecount = br.readLine()) != null) {
-			if (rowcount > StartRow && rowcount < EndRow) {
+			if (rowcount >= StartRow && rowcount <= EndRow) {
 
 				String MRN = linecount.substring(position.get(0) - 1, position.get(1)).trim();
 
 				ArrayList<String> indexList = new ArrayList();
-				for (int i = 0; i < position.size(); i += 2) { // i += 2 , i = i + 2 ; both the statement is same
+			
+				if (properties.getProperty("field.TestAllField").equalsIgnoreCase("Yes")) {
 					
-					indexList.add(linecount.substring(position.get(i) - 1, position.get(i + 1)).trim());
-				}
+//				    To compare all the fields
+					for (int i = 0; i < position.size(); i += 2) { // i += 2 , i = i + 2 ; both the statement is same
 
+						indexList.add(linecount.substring(position.get(i) - 1, position.get(i + 1)).trim());
+					}
+
+				} else {
+
+//				    To compare specific field
+					for (int index : fieldToValidate) {
+						indexList.add(linecount.substring(position.get(index * 2 - 2) - 1, position.get(index * 2 - 1))
+								.trim());
+						
+					}
+					
+				}
 				fileValue.put(MRN, indexList);
 			}
 			rowcount++;
 
 		}
-
+		System.out.println(fileValue);
 		return fileValue;
 
 	}

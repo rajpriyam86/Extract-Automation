@@ -1,4 +1,4 @@
-package ExtractAutomation; 
+package ExtractAutomation;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -11,23 +11,24 @@ import java.util.List;
 import java.util.Properties;
 
 public class JDBCConnection {
-	
-	public static ResultSet DatabaseConnection (String MRN) throws ClassNotFoundException, SQLException, IOException
-	{
+
+	public static ResultSet DatabaseConnection(String MRN) throws ClassNotFoundException, SQLException, IOException {
 		Properties properties = ConfigReader.loadproperties();
-   	 String DBUrl = properties.getProperty("db.url");
-   	 String Username = properties.getProperty("db.user");
-   	 String DBpassword = properties.getProperty("db.password");
+		String DBUrl = properties.getProperty("db.url");
+		String Username = properties.getProperty("db.user");
+		String DBpassword = properties.getProperty("db.password");
 		List<String> DBField = new ArrayList<>();
-		Class.forName("oracle.jdbc.driver.OracleDriver");  
+		Class.forName("oracle.jdbc.driver.OracleDriver");
 		Connection conn = DriverManager.getConnection(DBUrl, Username, DBpassword);
 		Statement s = conn.createStatement();
-		ResultSet rs = s.executeQuery("SELECT * FROM TAP_PERSON WHERE MRN = '" + MRN + "'");
+		ResultSet rs;
 		
+		if (properties.getProperty("field.TestAllField").equalsIgnoreCase("Yes")) {
+			rs = s.executeQuery(properties.getProperty("sql.query.all") + "'"+ MRN + "'");
+		} else {
+			rs = s.executeQuery( properties.getProperty("sql.query.specific") + "'" + MRN + "'");
+		}
 
-		
-		
-		
 		return rs;
 	}
 
