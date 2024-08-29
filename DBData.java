@@ -12,7 +12,7 @@ import java.util.List;
 
 public class DBData {
 
-    public static ArrayList<String> extractvalues(String MRN) throws ClassNotFoundException, SQLException {
+    public static ArrayList<String> extractvalues(String MRN) throws ClassNotFoundException, SQLException, IOException {
         // Create a list to hold the row data
         ArrayList<String> DBRowData = new ArrayList<>();
         

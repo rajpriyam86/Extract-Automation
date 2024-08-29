@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Properties;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
@@ -18,7 +19,8 @@ public class FieldDetails {
 
 	public static ArrayList<Integer> filedPosition(String sheetname) throws IOException {
 		
-		
+		Properties properties = ConfigReader.loadproperties();
+	   	 String filePath = properties.getProperty("field.details.filepath");
 		
 		ArrayList<Integer> position = new ArrayList<>();
 		FileInputStream fileInputStream = new FileInputStream(new File(filePath));
