@@ -1,14 +1,8 @@
 package ExtractAutomation;
 
 import java.io.IOException;
-import java.sql.Date;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
@@ -23,7 +17,7 @@ public class TestMethod {
 		// Uncomment and modify according to your file reading method
 		Map<String, ArrayList<String>> fileData = FileReader.extractvalues();
 
-		ArrayList<String> filedName = FieldDetails.filedNameList("Field_Positions");
+		ArrayList<String> filedName = FieldDetails.filedNameList();
 		
 		ArrayList<Integer> fieldToValidate  = FieldToTest.fieldToTestList();
 

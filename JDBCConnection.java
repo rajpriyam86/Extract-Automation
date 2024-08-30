@@ -6,8 +6,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 public class JDBCConnection {
@@ -17,7 +15,6 @@ public class JDBCConnection {
 		String DBUrl = properties.getProperty("db.url");
 		String Username = properties.getProperty("db.user");
 		String DBpassword = properties.getProperty("db.password");
-		List<String> DBField = new ArrayList<>();
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		Connection conn = DriverManager.getConnection(DBUrl, Username, DBpassword);
 		Statement s = conn.createStatement();
