@@ -19,11 +19,13 @@ public class JDBCConnection {
 		Connection conn = DriverManager.getConnection(DBUrl, Username, DBpassword);
 		Statement s = conn.createStatement();
 		ResultSet rs;
-		
+
 		if (properties.getProperty("field.TestAllField").equalsIgnoreCase("Yes")) {
-			rs = s.executeQuery(properties.getProperty("sql.query.all") + "'"+ MRN + "'");
+			rs = s.executeQuery(properties.getProperty("sql.query.all") + "'" + MRN + "'");
+
 		} else {
-			rs = s.executeQuery( properties.getProperty("sql.query.specific") + "'" + MRN + "'");
+			rs = s.executeQuery(properties.getProperty("sql.query.specific") + "'" + MRN + "'");
+
 		}
 
 		return rs;

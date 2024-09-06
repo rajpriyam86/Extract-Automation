@@ -1,0 +1,46 @@
+********** Test Summary **********
+===================================
+
+1) MRN: 721658
+----------------------------------
+Issues found:
+ -Field Name: FIRST_NAME
+    *File Data: Priyamj
+    *DB Data: Priyam
+
+ -Field Name: MIDDLE_NAME
+    *File Data: h
+    *DB Data: G
+
+ -Field Name: DOB
+    *File Data: 05-Jun-78
+    *DB Data: 05-Jun-98
+
+===========================
+
+2) MRN: 756420
+
+All fields validated successfully No Issues found:
+
+=======================================================
+
+3) MRN: 452135
+
+All fields validated successfully No Issues found:
+
+=======================================================
+
+4) MRN: 578632
+----------------------------------
+Issues found:
+ -Field Name: FIRST_NAME
+    *File Data: Suggka
+    *DB Data: Suzuka
+
+===========================
+
+5) MRN: 705412
+
+All fields validated successfully No Issues found:
+
+=======================================================
