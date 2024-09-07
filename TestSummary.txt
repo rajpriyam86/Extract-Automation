@@ -4,43 +4,48 @@
 1) MRN: 721658
 ----------------------------------
 Issues found:
- -Field Name: FIRST_NAME
-    *File Data: Priyamj
-    *DB Data: Priyam
-
  -Field Name: MIDDLE_NAME
-    *File Data: h
-    *DB Data: G
+    *File Data: G
+    *DB Data: C1
 
- -Field Name: DOB
-    *File Data: 05-Jun-78
-    *DB Data: 05-Jun-98
+ -Field Name: LAST_NAME
+    *File Data: Kumar
+    *DB Data: KUMAR
 
 ===========================
 
 2) MRN: 756420
+----------------------------------
+Issues found:
+ -Field Name: LAST_NAME
+    *File Data: Makti
+    *DB Data: MARTIN
 
-All fields validated successfully No Issues found:
-
-=======================================================
+===========================
 
 3) MRN: 452135
+----------------------------------
+Issues found:
+ -Field Name: LAST_NAME
+    *File Data: Das
+    *DB Data: DAS
 
-All fields validated successfully No Issues found:
-
-=======================================================
+===========================
 
 4) MRN: 578632
 ----------------------------------
 Issues found:
- -Field Name: FIRST_NAME
-    *File Data: Suggka
-    *DB Data: Suzuka
+ -Field Name: LAST_NAME
+    *File Data: LOis
+    *DB Data: LOIS
 
 ===========================
 
 5) MRN: 705412
+----------------------------------
+Issues found:
+ -Field Name: LAST_NAME
+    *File Data: Raj
+    *DB Data: RAJ
 
-All fields validated successfully No Issues found:
-
-=======================================================
+===========================
