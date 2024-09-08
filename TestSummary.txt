@@ -1,16 +1,21 @@
 ********** Test Summary **********
 ===================================
 
+###Data extracted from the file for validation from line number 0 To 5
+===================================
+
 1) MRN: 721658
 ----------------------------------
 Issues found:
  -Field Name: MIDDLE_NAME
     *File Data: G
     *DB Data: C1
+    *Expected Data: C1
 
- -Field Name: LAST_NAME
-    *File Data: Kumar
-    *DB Data: KUMAR
+ -Field Name: PARENT_ID
+    *File Data: 58650
+    *Default Data: 541254
+    *Expected Data: 541254
 
 ===========================
 
@@ -19,16 +24,23 @@ Issues found:
 Issues found:
  -Field Name: LAST_NAME
     *File Data: Makti
-    *DB Data: MARTIN
+    *DB Data: Martin
+    *Expected Data: Martin
+
+ -Field Name: PARENT_ID
+    *File Data: 45002
+    *Default Data: 541254
+    *Expected Data: 541254
 
 ===========================
 
 3) MRN: 452135
 ----------------------------------
 Issues found:
- -Field Name: LAST_NAME
-    *File Data: Das
-    *DB Data: DAS
+ -Field Name: PARENT_ID
+    *File Data: 78530
+    *Default Data: 541254
+    *Expected Data: 541254
 
 ===========================
 
@@ -37,15 +49,22 @@ Issues found:
 Issues found:
  -Field Name: LAST_NAME
     *File Data: LOis
-    *DB Data: LOIS
+    *DB Data: Lois
+    *Expected Data: Lois
+
+ -Field Name: PARENT_ID
+    *File Data: 58650
+    *Default Data: 541254
+    *Expected Data: 541254
 
 ===========================
 
 5) MRN: 705412
 ----------------------------------
 Issues found:
- -Field Name: LAST_NAME
-    *File Data: Raj
-    *DB Data: RAJ
+ -Field Name: PARENT_ID
+    *File Data: 45002
+    *Default Data: 541254
+    *Expected Data: 541254
 
 ===========================

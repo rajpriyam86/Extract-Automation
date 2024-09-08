@@ -18,12 +18,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class FieldDetails {
 	
 	Properties properties;// = ConfigReader.loadproperties();
-	String filePath, sheetname;
+	String filePath, sheetname,defaultsheet;
 	// creating a clobel method to store the filepath & sheetname of the excel so that we can call this in the othyer methods
 	public FieldDetails() throws IOException {
 		properties = ConfigReader.loadproperties();
 		filePath = properties.getProperty("field.details.filepath");
 		sheetname = properties.getProperty("field.details.sheetname");
+		defaultsheet = properties.getProperty("field.default.sheetname");
 	}
 	
 	//storing the start and end positions of the feilds from Excel in an arraylist
@@ -186,6 +187,41 @@ public class FieldDetails {
 			}
 		}
 		return intArray;
+
+	}
+	
+	public static Map<String, String> DefaultValueList() throws IOException {
+		FieldDetails myObj = new FieldDetails();
+
+		Properties properties = ConfigReader.loadproperties();
+		Map<String, String> defaultvalues = new HashMap<>();
+		FileInputStream file = new FileInputStream(properties.getProperty("field.details.filepath"));
+		Workbook workbook = new XSSFWorkbook(file);
+
+		Sheet sheet = workbook.getSheet(myObj.defaultsheet);
+		
+	
+
+		for (int rowindex = 1; rowindex <= sheet.getLastRowNum(); rowindex++) {
+			Row row = sheet.getRow(rowindex);
+			if (row == null) {
+				continue; // Skip the empty row
+			}
+
+			Cell fieldNameCell = row.getCell(0);
+			Cell transformation = row.getCell(1);
+			String fieldNames = fieldNameCell.getStringCellValue();
+			String logic = (transformation == null || transformation.getCellType() == CellType.BLANK) ? 
+	                "null" : transformation.getStringCellValue().trim();
+			
+
+
+			defaultvalues.put(fieldNames.toUpperCase(), logic);
+
+		}
+	
+		workbook.close(); 
+		return defaultvalues;
 
 	}
 
