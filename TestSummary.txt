@@ -7,64 +7,289 @@
 1) MRN: 721658
 ----------------------------------
 Issues found:
+ -Field Name: PERSON_COVERED
+    *File Data: N
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: PERSON_REL_TO_SUBSCRIBER
+    *File Data: Self
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_END_DATE
+    *File Data: 01/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: SUBSCRIBER_MRN
+    *File Data: 721658
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_START_DATE
+    *File Data: 01/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: GROUP_ID
+    *File Data: 1002
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: SPACE
+    *File Data: 
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: EFFECTIVE_START_DATE
+    *File Data: 03/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_ID
+    *File Data: 58650
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: EFFECTIVE_END_DATE
+    *File Data: 01/01/2024
+    *Default Data: null
+    *Expected Data: null
+
  -Field Name: MIDDLE_NAME
     *File Data: G
     *DB Data: C1
     *Expected Data: C1
-
- -Field Name: PARENT_ID
-    *File Data: 58650
-    *Default Data: 541254
-    *Expected Data: 541254
 
 ===========================
 
 2) MRN: 756420
 ----------------------------------
 Issues found:
+ -Field Name: PERSON_COVERED
+    *File Data: Y
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: PERSON_REL_TO_SUBSCRIBER
+    *File Data: Spouse
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_END_DATE
+    *File Data: 12/31/2024
+    *Default Data: null
+    *Expected Data: null
+
  -Field Name: LAST_NAME
     *File Data: Makti
     *DB Data: Martin
     *Expected Data: Martin
 
- -Field Name: PARENT_ID
+ -Field Name: SUBSCRIBER_MRN
+    *File Data: 705412
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_START_DATE
+    *File Data: 01/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: GROUP_ID
+    *File Data: 1007
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: SPACE
+    *File Data: 
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: EFFECTIVE_START_DATE
+    *File Data: 01/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_ID
     *File Data: 45002
-    *Default Data: 541254
-    *Expected Data: 541254
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: EFFECTIVE_END_DATE
+    *File Data: 12/31/2024
+    *Default Data: null
+    *Expected Data: null
 
 ===========================
 
 3) MRN: 452135
 ----------------------------------
 Issues found:
- -Field Name: PARENT_ID
+ -Field Name: PERSON_COVERED
+    *File Data: Y
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: PERSON_REL_TO_SUBSCRIBER
+    *File Data: Self
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_END_DATE
+    *File Data: 12/31/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: SUBSCRIBER_MRN
+    *File Data: 452135
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_START_DATE
+    *File Data: 03/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: GROUP_ID
+    *File Data: 1003
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: SPACE
+    *File Data: 
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: EFFECTIVE_START_DATE
+    *File Data: 03/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_ID
     *File Data: 78530
-    *Default Data: 541254
-    *Expected Data: 541254
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: EFFECTIVE_END_DATE
+    *File Data: 12/31/2024
+    *Default Data: null
+    *Expected Data: null
 
 ===========================
 
 4) MRN: 578632
 ----------------------------------
 Issues found:
+ -Field Name: PERSON_COVERED
+    *File Data: N
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: PERSON_REL_TO_SUBSCRIBER
+    *File Data: Spouse
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_END_DATE
+    *File Data: 12/31/2024
+    *Default Data: null
+    *Expected Data: null
+
  -Field Name: LAST_NAME
     *File Data: LOis
     *DB Data: Lois
     *Expected Data: Lois
 
- -Field Name: PARENT_ID
+ -Field Name: SUBSCRIBER_MRN
+    *File Data: 721658
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_START_DATE
+    *File Data: 01/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: GROUP_ID
+    *File Data: 1003
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: SPACE
+    *File Data: 
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: EFFECTIVE_START_DATE
+    *File Data: 03/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_ID
     *File Data: 58650
-    *Default Data: 541254
-    *Expected Data: 541254
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: EFFECTIVE_END_DATE
+    *File Data: 12/31/2024
+    *Default Data: null
+    *Expected Data: null
 
 ===========================
 
 5) MRN: 705412
 ----------------------------------
 Issues found:
- -Field Name: PARENT_ID
+ -Field Name: PERSON_COVERED
+    *File Data: Y
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: PERSON_REL_TO_SUBSCRIBER
+    *File Data: Self
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_END_DATE
+    *File Data: 12/31/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: SUBSCRIBER_MRN
+    *File Data: 705412
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_START_DATE
+    *File Data: 01/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: GROUP_ID
+    *File Data: 1008
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: SPACE
+    *File Data: 
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: EFFECTIVE_START_DATE
+    *File Data: 01/01/2024
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: COVERAGE_ID
     *File Data: 45002
-    *Default Data: 541254
-    *Expected Data: 541254
+    *Default Data: null
+    *Expected Data: null
+
+ -Field Name: EFFECTIVE_END_DATE
+    *File Data: 12/31/2024
+    *Default Data: null
+    *Expected Data: null
 
 ===========================

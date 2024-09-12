@@ -11,10 +11,10 @@ import java.util.Properties;
 
 public class FileReader {
 
-    public static Map<String, Map<String, String>> extractValues() throws IOException {
+    public static Map<String, Map<String, String>> extractValues(String filepath) throws IOException {
         // Load properties file
         Properties properties = ConfigReader.loadproperties();
-        String filepath = properties.getProperty("file.path");
+//        String filepath = properties.getProperty("file.kpmc.path");
         int startRow = Integer.parseInt(properties.getProperty("start.position"));
         int endRow = Integer.parseInt(properties.getProperty("end.position"));
 

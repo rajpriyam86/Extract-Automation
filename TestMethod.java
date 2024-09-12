@@ -16,7 +16,7 @@ public class TestMethod {
 		String outputfile = "F:/Automation Project/Amazon.in/UdemyLearning/src/ExtractAutomation/TestSummary.txt";
 		int j = 1; // Creating this variable to print the MRN in output in sequence like 1), 2), 3)
 					// this way
-
+		String filepath = properties.getProperty("file.kpmc.path");
 		// Initiating BufferedWriter to print the output in a file
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputfile))) {
 			writer.write("********** Test Summary **********");
@@ -29,7 +29,7 @@ public class TestMethod {
 			writer.write("===================================");
 			writer.newLine();
 			// Read file data
-			Map<String, Map<String, String>> fileData = FileReader.extractValues();
+			Map<String, Map<String, String>> fileData = FileReader.extractValues(filepath);
 			// Read DefaultValues
 			Map<String, String> defaultValues = FieldDetails.DefaultValueList();
 
