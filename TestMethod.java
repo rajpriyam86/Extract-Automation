@@ -12,6 +12,7 @@ public class TestMethod {
 
 	public static void main(String[] args) throws Exception {
 		Properties properties = ConfigReader.loadproperties();
+		String KPMCfilepath = properties.getProperty("file.kpmc.path");
 		// Define file path
 		String outputfile = "F:/Automation Project/Amazon.in/UdemyLearning/src/ExtractAutomation/TestSummary.txt";
 		int j = 1; // Creating this variable to print the MRN in output in sequence like 1), 2), 3)
@@ -29,13 +30,14 @@ public class TestMethod {
 			writer.write("===================================");
 			writer.newLine();
 			// Read file data
-			Map<String, Map<String, String>> fileData = FileReader.extractValues();
+			Map<String, Map<String, String>> fileData = FileReader.extractValues(KPMCfilepath);
 			// Read DefaultValues
 			Map<String, String> defaultValues = FieldDetails.DefaultValueList();
 
 			// Compare with DB data
 			for (Map.Entry<String, Map<String, String>> entry : fileData.entrySet()) {
-				String mrn = entry.getKey();
+				String mrn = entry.getKey().split("-")[0];
+				System.out.println(mrn);
 				Map<String, String> fileFieldValues = entry.getValue();
 				Map<String, String> dbFieldValues = DBData.extractValues(mrn);
 
