@@ -1,0 +1,19 @@
+********** Test Summary **********
+===================================
+
+### Data extracted from the file for validation from line number 0 To 5
+===================================
+
+MRN: 705412
+Issues found: - Field Name: EFFECTIVE_START_DATE
+    * File Data: 01/02/2024
+    * DB Data: 01/01/2024
+    * Expected Data: 01/01/2024
+
+MRN: 578632 - This MRN doesn't exist in the database.
+
+********** Validation Summary **********
+Total MRNs Validated: 5
+Total MRNs with Issues: 2
+Test Result: Fail
+===================================

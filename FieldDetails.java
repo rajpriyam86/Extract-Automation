@@ -212,7 +212,7 @@ public class FieldDetails {
 			Cell transformation = row.getCell(1);
 			String fieldNames = fieldNameCell.getStringCellValue();
 			String logic = (transformation == null || transformation.getCellType() == CellType.BLANK) ? 
-	                "null" : transformation.getStringCellValue().trim();
+	                "" : transformation.getStringCellValue().trim();
 			
 
 

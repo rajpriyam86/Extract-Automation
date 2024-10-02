@@ -23,7 +23,7 @@ public class DBData {
         ResultSetMetaData rsmd = values.getMetaData();
 
         // Date formatter for the desired format
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         
         // Load the transformation logic from Excel file
         Map<String, String> fieldTransformations = FieldDetails.FieldsLogicList();

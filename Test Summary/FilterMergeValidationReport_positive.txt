@@ -1,0 +1,18 @@
+=== FilterMerge Validation Report ===
+-----------------------------------
+== Legacy File ==
+--------------------
+Legacy Migrated Count: 10
+Legacy Non-migrated Count: 9
+--------------------
+
+== KPMC File ==
+------------------
+KPMC Migrated Count: 1
+KPMC Non-migrated Count: 4
+------------------
+
+=== Summary ===
+Total OUT File Records: 10
+KPMC Migrated Count + Legacy Non-migrated Count = 10
+-----------------------------------

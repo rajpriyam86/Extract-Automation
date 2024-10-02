@@ -13,7 +13,8 @@ import java.nio.file.Paths;
 import java.util.Vector;
 
 public class WinSCPJava {
-
+	public static String downloadconfirmation= "";
+	public static String FilenotFoundMessage = "";
     private static final String SFTP_HOST = "localhost";
     private static final int SFTP_PORT = 22; // Default SFTP port
     private static final String SFTP_USER = "desktop-f0ikbet\\dell";
@@ -81,13 +82,13 @@ public class WinSCPJava {
                 try (FileOutputStream fos = new FileOutputStream(localFile)) {
                     channelSftp.get(remoteFilePath, fos);
                 }
-                System.out.println("Latest file downloaded: " + localFile.getAbsolutePath());
+                downloadconfirmation ="Latest file downloaded in: " + localFile.getAbsolutePath();
 
                 // Read the file contents
 //                latestFileContents = new String(Files.readAllBytes(localFile.toPath()));
                 filename = latestFileName;
             } else {
-                System.out.println("No files found in the directory.");
+                FilenotFoundMessage = "No files found in the directory.";
             }
 
         } finally {

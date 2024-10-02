@@ -1,0 +1,25 @@
+********** Test Summary **********
+===================================
+
+
+Test result for JobCompletionCheck:
+Job Run ID: 4
+Job Run Status: COMPLETED
+Start Time: 2024-09-09 11:30:00
+End Time: null
+===================================
+Test result for FileNamingConvention:
+
+
+File found in LZ: KPMC_Test_KPMC.KPMC
+
+Latest file downloaded in: C:\Users\Dell\Documents\KPMC_Test_KPMC.KPMC
+
+File name does not match
+Expected: KPMC_Error_KPMC.KPMC
+Found: KPMC_Test_KPMC.KPMC
+
+Test Result: Fail
+
+===================================
+***********End of Test Summary***********

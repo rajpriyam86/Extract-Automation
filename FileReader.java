@@ -21,8 +21,8 @@ public class FileReader {
 		// Load properties file
 		Properties properties = ConfigReader.loadproperties();
 //		String filepath = properties.getProperty("file.path"); //change to generalise the input file instead of hardcode it
-		int startRow = Integer.parseInt(properties.getProperty("start.position"));
-		int endRow = Integer.parseInt(properties.getProperty("end.position"));
+//		int startRow = Integer.parseInt(properties.getProperty("start.position"));
+//		int endRow = Integer.parseInt(properties.getProperty("end.position"));
 
 		// Map to store MRN_fieldName as key and fieldValue as value
 		Map<String, Map<String, String>> fileValue = new HashMap<>();

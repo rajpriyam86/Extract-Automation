@@ -1,0 +1,24 @@
+=== FilterMerge Validation Report ===
+-----------------------------------
+== Legacy File ==
+--------------------
+ERROR: MRN 48579 is migrated but found in OUT file.
+Record: [48579, Jared, 5, Purdy, 20-Dec-47, Female, 29491, 133666, 04/26/2024, 10/20/2024, , N, Self, 02/20/2024, 05/22/2025, 1004]
+
+Legacy Migrated Count: 10
+Legacy Non-migrated Count: 9
+--------------------
+
+== KPMC File ==
+------------------
+ERROR: MRN 721658 is non-migrated but found in OUT file.
+Record: [721658, Priyam, G, Kumar, 05-Jun-98, Male, 452102, 705412, 01/01/2024, 01/07/2024, , Y, Self, 01/01/2024, 01/07/2024, 1002]
+
+KPMC Migrated Count: 1
+KPMC Non-migrated Count: 5
+------------------
+
+=== Summary ===
+Total OUT File Records: 12
+KPMC Migrated Count + Legacy Non-migrated Count = 10
+-----------------------------------
